@@ -12,12 +12,12 @@ namespace QuizWebApp.Models
         {
         }
 
-        QuizContext(DbContextOptions<QuizContext> options) :base(options)
+        public QuizContext(DbContextOptions<QuizContext> options) :base(options)
         {
         }
 
         public DbSet<Quiz> Quizzes { get; set; }
-        //public DbSet<Question> Questions { get; set; }
-        //public DbSet<Answer> Answers { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<Answer> Answers { get; set; }
     }
 }

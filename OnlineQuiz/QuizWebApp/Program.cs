@@ -30,8 +30,9 @@ namespace QuizWebApp
 
         private static void SetUpConfiguration(WebHostBuilderContext ctx, IConfigurationBuilder builder)
         {
-            builder.Sources.Clear();
-            builder.AddJsonFile("appsettings.json", false, true);
+            //builder.Sources.Clear();
+            builder.AddJsonFile("appsettings.json", false, true)
+                    .AddEnvironmentVariables();
         }
     }
 }
